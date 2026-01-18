@@ -1,1 +1,20 @@
-
+{
+  "slide_id": "DEMO-SLIDE-001",
+  "patch_spec": { "patch_size": 256, "stride": 256, "min_tissue_fraction": 0.1 },
+  "summary": {
+    "num_patches_scored": 48,
+    "aggregate_risk_score": 0.62,
+    "top_k": 5
+  },
+  "top_regions": [
+    { "x": 512, "y": 256, "w": 256, "h": 256, "prob": 0.91 },
+    { "x": 256, "y": 256, "w": 256, "h": 256, "prob": 0.86 },
+    { "x": 512, "y": 512, "w": 256, "h": 256, "prob": 0.83 },
+    { "x": 768, "y": 256, "w": 256, "h": 256, "prob": 0.79 },
+    { "x": 256, "y": 512, "w": 256, "h": 256, "prob": 0.76 }
+  ],
+  "notes": [
+    "This output is synthetic and provided to demonstrate the decision-support contract.",
+    "Model weights and clinical datasets are intentionally excluded."
+  ]
+}
