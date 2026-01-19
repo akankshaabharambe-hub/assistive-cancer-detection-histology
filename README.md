@@ -99,6 +99,34 @@ assistive-cancer-detection-histology/
 Each component is intentionally modular to support clarity, testing, and future extension.
 
 ---
+## Local Inference API (Demo)
+
+This repository includes a minimal REST-based inference service to demonstrate
+how the screening pipeline can be exposed as a production-style API.
+
+The API:
+- accepts histopathology images (PNG/JPG)
+- performs patch-based preprocessing
+- runs deterministic demo inference (no model weights included)
+- returns slide-level risk signals and top suspicious regions
+
+### Run locally
+
+```bash
+pip install -r requirements.txt
+uvicorn api.app:app --reload
+
+```
+### Example Request
+```text
+curl -X POST "http://127.0.0.1:8000/predict" \
+  -H "accept: application/json" \
+  -H "Content-Type: multipart/form-data" \
+  -F "file=@path/to/image.png"
+```
+The API backend is a demo inference implementation and is intended to
+illustrate serving patterns, not clinical performance.
+---
 
 ## Scope & Limitations
 
