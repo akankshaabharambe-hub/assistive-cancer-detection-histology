@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.DS_Store
+
+.git/
+.gitignore
+
+# Large / local artifacts
+artifacts/
+outputs/
+*.log
+
+# Not needed in image
+docs/
+examples/
